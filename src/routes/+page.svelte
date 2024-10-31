@@ -1,60 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
+ <script>
+import { onMount } from 'svelte';
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+let loaded = false;
+onMount(() => {
+    loaded = true;
+});
+</script>
 
-  <!-- 
-    - primary meta tags
-  -->
-  <title>Grilli - Amazing & Delicious Food</title>
-  <meta name="title" content="Grilli - Amazing & Delicious Food">
-  <meta name="description" content="This is a Restaurant html template made by codewithsadee">
-
-  <!-- 
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-
-  <!-- 
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
-
-  <!-- 
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!-- 
-    - preload images
-  -->
-  <link rel="preload" as="image" href="./assets/images/hero-slider-1.jpg">
-  <link rel="preload" as="image" href="./assets/images/hero-slider-2.jpg">
-  <link rel="preload" as="image" href="./assets/images/hero-slider-3.jpg">
-
-</head>
-
-<body id="top">
-
-  <!-- 
+ <!--
     - #PRELOADER
   -->
-
-  <div class="preload" data-preaload>
-    <div class="circle"></div>
-    <p class="text">Grilli</p>
-  </div>
-
-
-
+{#if !loaded}
+    <div class="preload" data-preload>
+        <div class="circle"></div>
+        <p class="text">Grilli</p>
+    </div>
+{/if}
 
 
-  <!-- 
+
+  <!--
     - #TOP BAR
   -->
 
@@ -106,15 +71,15 @@
 
 
 
-  <!-- 
+  <!--
     - #HEADER
   -->
 
   <header class="header" data-header>
     <div class="container">
 
-      <a href="#" class="logo">
-        <img src="./assets/images/logo.svg" width="160" height="50" alt="Grilli - Home">
+      <a href="javascript:void(0);" class="logo">
+        <img src="images/logo.svg" width="160" height="50" alt="Grilli - Home">
       </a>
 
       <nav class="navbar" data-navbar>
@@ -124,7 +89,7 @@
         </button>
 
         <a href="#" class="logo">
-          <img src="./assets/images/logo.svg" width="160" height="50" alt="Grilli - Home">
+          <img src="images/logo.svg" width="160" height="50" alt="Grilli - Home">
         </a>
 
         <ul class="navbar-list">
@@ -194,7 +159,7 @@
 
       </nav>
 
-      <a href="#" class="btn btn-secondary">
+      <a href="https://mrvino-lugano.resos.com/booking" class="btn btn-secondary">
         <span class="text text-1">Find A Table</span>
 
         <span class="text text-2" aria-hidden="true">Find A Table</span>
@@ -218,7 +183,7 @@
   <main>
     <article>
 
-      <!-- 
+      <!--
         - #HERO
       -->
 
@@ -229,7 +194,7 @@
           <li class="slider-item active" data-hero-slider-item>
 
             <div class="slider-bg">
-              <img src="./assets/images/hero-slider-1.jpg" width="1880" height="950" alt="" class="img-cover">
+              <img src="images/hero-slider-1.jpg" width="1880" height="950" alt="" class="img-cover">
             </div>
 
             <p class="label-2 section-subtitle slider-reveal">Tradational & Hygine</p>
@@ -254,7 +219,7 @@
           <li class="slider-item" data-hero-slider-item>
 
             <div class="slider-bg">
-              <img src="./assets/images/hero-slider-2.jpg" width="1880" height="950" alt="" class="img-cover">
+              <img src="images/hero-slider-2.jpg" width="1880" height="950" alt="" class="img-cover">
             </div>
 
             <p class="label-2 section-subtitle slider-reveal">delightful experience</p>
@@ -279,7 +244,7 @@
           <li class="slider-item" data-hero-slider-item>
 
             <div class="slider-bg">
-              <img src="./assets/images/hero-slider-3.jpg" width="1880" height="950" alt="" class="img-cover">
+              <img src="images/hero-slider-3.jpg" width="1880" height="950" alt="" class="img-cover">
             </div>
 
             <p class="label-2 section-subtitle slider-reveal">amazing & delicious</p>
@@ -311,8 +276,8 @@
           <ion-icon name="chevron-forward"></ion-icon>
         </button>
 
-        <a href="#" class="hero-btn has-after">
-          <img src="./assets/images/hero-icon.png" width="48" height="48" alt="booking icon">
+        <a href="https://mrvino-lugano.resos.com/booking" class="hero-btn has-after">
+          <img src="images/hero-icon.png" width="48" height="48" alt="booking icon">
 
           <span class="label-2 text-center span">Book A Table</span>
         </a>
@@ -323,7 +288,7 @@
 
 
 
-      <!-- 
+      <!--
         - #SERVICE
       -->
 
@@ -346,7 +311,7 @@
 
                 <a href="#" class="has-before hover:shine">
                   <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
-                    <img src="./assets/images/service-1.jpg" width="285" height="336" loading="lazy" alt="Breakfast"
+                    <img src="images/service-1.jpg" width="285" height="336" loading="lazy" alt="Breakfast"
                       class="img-cover">
                   </figure>
                 </a>
@@ -369,7 +334,7 @@
 
                 <a href="#" class="has-before hover:shine">
                   <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
-                    <img src="./assets/images/service-2.jpg" width="285" height="336" loading="lazy" alt="Appetizers"
+                    <img src="images/service-2.jpg" width="285" height="336" loading="lazy" alt="Appetizers"
                       class="img-cover">
                   </figure>
                 </a>
@@ -392,7 +357,7 @@
 
                 <a href="#" class="has-before hover:shine">
                   <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
-                    <img src="./assets/images/service-3.jpg" width="285" height="336" loading="lazy" alt="Drinks"
+                    <img src="images/service-3.jpg" width="285" height="336" loading="lazy" alt="Drinks"
                       class="img-cover">
                   </figure>
                 </a>
@@ -412,9 +377,9 @@
 
           </ul>
 
-          <img src="./assets/images/shape-1.png" width="246" height="412" loading="lazy" alt="shape"
+          <img src="images/shape-1.png" width="246" height="412" loading="lazy" alt="shape"
             class="shape shape-1 move-anim">
-          <img src="./assets/images/shape-2.png" width="343" height="345" loading="lazy" alt="shape"
+          <img src="images/shape-2.png" width="343" height="345" loading="lazy" alt="shape"
             class="shape shape-2 move-anim">
 
         </div>
@@ -424,7 +389,7 @@
 
 
 
-      <!-- 
+      <!--
         - #ABOUT
       -->
 
@@ -457,21 +422,21 @@
 
           <figure class="about-banner">
 
-            <img src="./assets/images/about-banner.jpg" width="570" height="570" loading="lazy" alt="about banner"
+            <img src="images/about-banner.jpg" width="570" height="570" loading="lazy" alt="about banner"
               class="w-100" data-parallax-item data-parallax-speed="1">
 
             <div class="abs-img abs-img-1 has-before" data-parallax-item data-parallax-speed="1.75">
-              <img src="./assets/images/about-abs-image.jpg" width="285" height="285" loading="lazy" alt=""
+              <img src="images/about-abs-image.jpg" width="285" height="285" loading="lazy" alt=""
                 class="w-100">
             </div>
 
             <div class="abs-img abs-img-2 has-before">
-              <img src="./assets/images/badge-2.png" width="133" height="134" loading="lazy" alt="">
+              <img src="images/badge-2.png" width="133" height="134" loading="lazy" alt="">
             </div>
 
           </figure>
 
-          <img src="./assets/images/shape-3.png" width="197" height="194" loading="lazy" alt="" class="shape">
+          <img src="images/shape-3.png" width="197" height="194" loading="lazy" alt="" class="shape">
 
         </div>
       </section>
@@ -480,21 +445,21 @@
 
 
 
-      <!-- 
+      <!--
         - #SPECIAL DISH
       -->
 
       <section class="special-dish text-center" aria-labelledby="dish-label">
 
         <div class="special-dish-banner">
-          <img src="./assets/images/special-dish-banner.jpg" width="940" height="900" loading="lazy" alt="special dish"
+          <img src="images/special-dish-banner.jpg" width="940" height="900" loading="lazy" alt="special dish"
             class="img-cover">
         </div>
 
         <div class="special-dish-content bg-black-10">
           <div class="container">
 
-            <img src="./assets/images/badge-1.png" width="28" height="41" loading="lazy" alt="badge" class="abs-img">
+            <img src="images/badge-1.png" width="28" height="41" loading="lazy" alt="badge" class="abs-img">
 
             <p class="section-subtitle label-2">Special Dish</p>
 
@@ -520,9 +485,9 @@
           </div>
         </div>
 
-        <img src="./assets/images/shape-4.png" width="179" height="359" loading="lazy" alt="" class="shape shape-1">
+        <img src="images/shape-4.png" width="179" height="359" loading="lazy" alt="" class="shape shape-1">
 
-        <img src="./assets/images/shape-9.png" width="351" height="462" loading="lazy" alt="" class="shape shape-2">
+        <img src="images/shape-9.png" width="351" height="462" loading="lazy" alt="" class="shape shape-2">
 
       </section>
 
@@ -530,7 +495,7 @@
 
 
 
-      <!-- 
+      <!--
         - #MENU
       -->
 
@@ -547,7 +512,7 @@
               <div class="menu-card hover:card">
 
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-1.png" width="100" height="100" loading="lazy" alt="Greek Salad"
+                  <img src="images/menu-1.png" width="100" height="100" loading="lazy" alt="Greek Salad"
                     class="img-cover">
                 </figure>
 
@@ -576,7 +541,7 @@
               <div class="menu-card hover:card">
 
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-2.png" width="100" height="100" loading="lazy" alt="Lasagne"
+                  <img src="images/menu-2.png" width="100" height="100" loading="lazy" alt="Lasagne"
                     class="img-cover">
                 </figure>
 
@@ -603,7 +568,7 @@
               <div class="menu-card hover:card">
 
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-3.png" width="100" height="100" loading="lazy" alt="Butternut Pumpkin"
+                  <img src="images/menu-3.png" width="100" height="100" loading="lazy" alt="Butternut Pumpkin"
                     class="img-cover">
                 </figure>
 
@@ -630,7 +595,7 @@
               <div class="menu-card hover:card">
 
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-4.png" width="100" height="100" loading="lazy" alt="Tokusen Wagyu"
+                  <img src="images/menu-4.png" width="100" height="100" loading="lazy" alt="Tokusen Wagyu"
                     class="img-cover">
                 </figure>
 
@@ -659,7 +624,7 @@
               <div class="menu-card hover:card">
 
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-5.png" width="100" height="100" loading="lazy" alt="Olivas Rellenas"
+                  <img src="images/menu-5.png" width="100" height="100" loading="lazy" alt="Olivas Rellenas"
                     class="img-cover">
                 </figure>
 
@@ -686,7 +651,7 @@
               <div class="menu-card hover:card">
 
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-6.png" width="100" height="100" loading="lazy" alt="Opu Fish"
+                  <img src="images/menu-6.png" width="100" height="100" loading="lazy" alt="Opu Fish"
                     class="img-cover">
                 </figure>
 
@@ -721,9 +686,9 @@
             <span class="text text-2" aria-hidden="true">View All Menu</span>
           </a>
 
-          <img src="./assets/images/shape-5.png" width="921" height="1036" loading="lazy" alt="shape"
+          <img src="images/shape-5.png" width="921" height="1036" loading="lazy" alt="shape"
             class="shape shape-2 move-anim">
-          <img src="./assets/images/shape-6.png" width="343" height="345" loading="lazy" alt="shape"
+          <img src="images/shape-6.png" width="343" height="345" loading="lazy" alt="shape"
             class="shape shape-3 move-anim">
 
         </div>
@@ -733,12 +698,12 @@
 
 
 
-      <!-- 
+      <!--
         - #TESTIMONIALS
       -->
 
       <section class="section testi text-center has-bg-image"
-        style="background-image: url('./assets/images/testimonial-bg.jpg')" aria-label="testimonials">
+        style="background-image: url('images/testimonial-bg.jpg')" aria-label="testimonials">
         <div class="container">
 
           <div class="quote">”</div>
@@ -755,7 +720,7 @@
           </div>
 
           <div class="profile">
-            <img src="./assets/images/testi-avatar.jpg" width="100" height="100" loading="lazy" alt="Sam Jhonson"
+            <img src="images/testi-avatar.jpg" width="100" height="100" loading="lazy" alt="Sam Jhonson"
               class="img">
 
             <p class="label-2 profile-name">Sam Jhonson</p>
@@ -768,7 +733,7 @@
 
 
 
-      <!-- 
+      <!--
         - #RESERVATION
       -->
 
@@ -854,7 +819,7 @@
 
             </form>
 
-            <div class="form-right text-center" style="background-image: url('./assets/images/form-pattern.png')">
+            <div class="form-right text-center" style="background-image: url('images/form-pattern.png')">
 
               <h2 class="headline-1 text-center">Contact Us</h2>
 
@@ -896,7 +861,7 @@
 
 
 
-      <!-- 
+      <!--
         - #FEATURES
       -->
 
@@ -913,7 +878,7 @@
               <div class="feature-card">
 
                 <div class="card-icon">
-                  <img src="./assets/images/features-icon-1.png" width="100" height="80" loading="lazy" alt="icon">
+                  <img src="images/features-icon-1.png" width="100" height="80" loading="lazy" alt="icon">
                 </div>
 
                 <h3 class="title-2 card-title">Hygienic Food</h3>
@@ -927,7 +892,7 @@
               <div class="feature-card">
 
                 <div class="card-icon">
-                  <img src="./assets/images/features-icon-2.png" width="100" height="80" loading="lazy" alt="icon">
+                  <img src="images/features-icon-2.png" width="100" height="80" loading="lazy" alt="icon">
                 </div>
 
                 <h3 class="title-2 card-title">Fresh Environment</h3>
@@ -941,7 +906,7 @@
               <div class="feature-card">
 
                 <div class="card-icon">
-                  <img src="./assets/images/features-icon-3.png" width="100" height="80" loading="lazy" alt="icon">
+                  <img src="images/features-icon-3.png" width="100" height="80" loading="lazy" alt="icon">
                 </div>
 
                 <h3 class="title-2 card-title">Skilled Chefs</h3>
@@ -955,7 +920,7 @@
               <div class="feature-card">
 
                 <div class="card-icon">
-                  <img src="./assets/images/features-icon-4.png" width="100" height="80" loading="lazy" alt="icon">
+                  <img src="images/features-icon-4.png" width="100" height="80" loading="lazy" alt="icon">
                 </div>
 
                 <h3 class="title-2 card-title">Event & Party</h3>
@@ -967,10 +932,10 @@
 
           </ul>
 
-          <img src="./assets/images/shape-7.png" width="208" height="178" loading="lazy" alt="shape"
+          <img src="images/shape-7.png" width="208" height="178" loading="lazy" alt="shape"
             class="shape shape-1">
 
-          <img src="./assets/images/shape-8.png" width="120" height="115" loading="lazy" alt="shape"
+          <img src="images/shape-8.png" width="120" height="115" loading="lazy" alt="shape"
             class="shape shape-2">
 
         </div>
@@ -980,7 +945,7 @@
 
 
 
-      <!-- 
+      <!--
         - #EVENT
       -->
 
@@ -997,7 +962,7 @@
               <div class="event-card has-before hover:shine">
 
                 <div class="card-banner img-holder" style="--width: 350; --height: 450;">
-                  <img src="./assets/images/event-1.jpg" width="350" height="450" loading="lazy"
+                  <img src="images/event-1.jpg" width="350" height="450" loading="lazy"
                     alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
 
                   <time class="publish-date label-2" datetime="2022-09-15">15/09/2022</time>
@@ -1018,7 +983,7 @@
               <div class="event-card has-before hover:shine">
 
                 <div class="card-banner img-holder" style="--width: 350; --height: 450;">
-                  <img src="./assets/images/event-2.jpg" width="350" height="450" loading="lazy"
+                  <img src="images/event-2.jpg" width="350" height="450" loading="lazy"
                     alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
 
                   <time class="publish-date label-2" datetime="2022-09-08">08/09/2022</time>
@@ -1039,7 +1004,7 @@
               <div class="event-card has-before hover:shine">
 
                 <div class="card-banner img-holder" style="--width: 350; --height: 450;">
-                  <img src="./assets/images/event-3.jpg" width="350" height="450" loading="lazy"
+                  <img src="images/event-3.jpg" width="350" height="450" loading="lazy"
                     alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
 
                   <time class="publish-date label-2" datetime="2022-09-03">03/09/2022</time>
@@ -1074,12 +1039,12 @@
 
 
 
-  <!-- 
+  <!--
     - #FOOTER
   -->
 
   <footer class="footer section has-bg-image text-center"
-    style="background-image: url('./assets/images/footer-bg.jpg')">
+    style="background-image: url('images/footer-bg.jpg')">
     <div class="container">
 
       <div class="footer-top grid-list">
@@ -1087,7 +1052,7 @@
         <div class="footer-brand has-before has-after">
 
           <a href="#" class="logo">
-            <img src="./assets/images/logo.svg" width="160" height="50" loading="lazy" alt="grilli home">
+            <img src="images/logo.svg" width="160" height="50" loading="lazy" alt="grilli home">
           </a>
 
           <address class="body-4">
@@ -1196,29 +1161,10 @@
 
 
 
-  <!-- 
+  <!--
     - #BACK TO TOP
   -->
 
   <a href="#top" class="back-top-btn active" aria-label="back to top" data-back-top-btn>
     <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
   </a>
-
-
-
-
-
-  <!-- 
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
-
-  <!-- 
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-</body>
-
-</html>
